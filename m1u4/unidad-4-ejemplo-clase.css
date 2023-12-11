@@ -1,0 +1,59 @@
+/*creo la primera regla, con la siguiente estructura*/
+h1 {
+    background-color: yellow;   /*cambio color de fondo*/
+    text-align: center;    /*alineo el texto*/
+    text-transform: uppercase;    /*lo cambia a mayuscula*/
+}
+
+/*creo la segunda regla, con la siguiente estructura*/
+h2 {
+    background-color: blue;
+    color: yellow;    /*color de la tipografia*/
+    font-family: Arial, Helvetica, sans-serif;    /*ambio tipo de tipogrfia*/
+    font-size: 30px;    /*cambio tamaño de la letra*/
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 28px;    /*tamaño deseparacion entre linea*/
+}
+
+/*destacar palabras de un párrafo o un párrafo completa, para esto se hacen a través de selectores, existen 2*/
+/*id permite un único elemente por id*/
+/*el selector de clases se puede utilizar varias veces*/
+
+/*usamos el selector clases*/
+
+
+.destacado
+
+/*debo escribirlo talcual esta en el html*/
+    {
+    color: red;
+    font-weight: bold;    /*negrita*/
+}
+
+#caja {
+    background-color: orange;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding: 10px;     /*espacios interior*/
+    margin-left: 300px;     /*border: 5px solid black; /*bordes continuos*/
+    border: 5px dashed black;     /*bordes en lina de puntos*/
+    border-top: 3px dashed yellow;     /*borde superior*/
+}
+
+/*a las P que solo se encuentren en caja se le aplica el formato, a esto se le denomina regla compuesta, porque tengo el ID la caja grande y le específico la p*/
+#caja p {
+    color: cyan;
+}
+
+#caja h2 {
+    font-size: 20px;
+    color: chartreuse
+}
+
+
+/*unidad rem, em -- investigar*/

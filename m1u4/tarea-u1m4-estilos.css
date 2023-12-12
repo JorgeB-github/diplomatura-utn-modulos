@@ -1,0 +1,45 @@
+#name {
+    background-color: rgb(179, 197, 197);
+    border: 5px dashed;
+    text-align: center;
+    margin-left: 600px;
+    margin-right: 850px;
+    padding: 10px;
+}
+
+h3 {
+    color: orange;
+}
+
+h4 {
+    background-color: darkolivegreen;
+}
+
+.destacado {
+    color: brown;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#subtitulo {
+    background-color: cornflowerblue;
+    margin-right: 600px;
+}
+
+#link {
+    margin-right: 600px;
+}
+
+#formformat {
+    color: blue;
+    font-weight: bolder;
+}
+
+#tit-form {
+    background-color: rgb(179, 197, 197);
+    margin-left: 350px;
+    margin-right: 550px;
+    padding: 10px;
+    color: rgb(170, 158, 197);
+    border: 5px solid black;
+}

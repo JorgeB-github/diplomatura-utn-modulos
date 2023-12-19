@@ -1,0 +1,22 @@
+.caja {
+
+    /*DEGRADE https://cssgradient.io/*/
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    /*SOMBRAS https://cssgenerator.org/text-shadow-css-generator.html*/
+    box-shadow: 30px 10px 5px black;
+    /*el primer valor se mueve en el eje Horizontal (X) el segundo vertical (Y) y el tercero es el desenfoique*/
+    /*BORDES REDONDEADOS*/
+    /*border-radius: 20px; /*todos los bordes redondeados*/
+    /*border-radius: 20px 0 50px 100px; /*alterno los bordes*/
+
+    /*desde la pagina https://cssgenerator.org/border-radius-css-generator.html*/
+    border-radius: 0px 101px 0px 59px;
+    -webkit-border-radius: 0px 101px 0px 59px;
+    -moz-border-radius: 0px 101px 0px 59px;
+    border: 44px solid #ff6550;
+
+
+
+
+
+}

@@ -1,0 +1,20 @@
+/*
+font-family: font-family: 'Preahvihear', sans-serif;
+*/
+
+.texto {
+    background-color: yellow;
+    column-count: 4; /*cantidad de columnas*/
+    column-gap: 50px; /* espacio entre columnas*/
+    column-rule: 2px solid blue;
+
+}
+
+.texto .sinmargen {
+    margin-top: 0; /*controlar el margen superior + reglas combinadas*/
+}
+
+h2 {
+    color: brown;
+    font-family: 'Preahvihear', sans-serif;
+}

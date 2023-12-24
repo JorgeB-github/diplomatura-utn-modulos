@@ -1,0 +1,71 @@
+.encabezado {       
+
+    border-radius: 36px 35px 0px 0px;
+    -webkit-border-radius: 36px 35px 0px 0px; /*bordes*/
+    -moz-border-radius: 36px 35px 0px 0px;
+
+
+    /*fondo degrade*/
+    background: rgb(186,188,196);
+    background: linear-gradient(0deg, rgba(186,188,196,1) 0%, rgba(61,87,120,1) 31%);
+   
+    box-shadow: 36px 14px 9px 1px rgba(131,151,194,1);
+    -webkit-box-shadow: 36px 14px 9px 1px rgba(131,151,194,1); /*fondo + disfuso del */
+    -moz-box-shadow: 36px 14px 9px 1px rgba(131,151,194,1);
+
+    width: 1200px;
+    height: 200px;
+
+
+}
+
+.nomppal {    
+    font-family: 'Permanent Marker', cursive;    
+    font-size: 70px;   
+    text-align: center;
+}
+
+.encabezado .columna .imgppal {
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    border: 5px solid #3553a1;
+
+    margin-left: 20px;
+    margin-top: 20px;
+
+    
+    
+}
+
+.columna {    
+    width: 750px;
+    height: 850px;
+    margin-left: 100px;     
+
+    background: rgb(186,188,196);
+    background: linear-gradient(0deg, rgba(186,188,196,1) 0%, rgba(232,236,241,1) 31%);
+}
+
+.datpersonales{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.reseña{
+    column-count: 3;
+    column-gap: 50px;
+}
+
+.reseña .sinmrgen{
+ margin-top: 0;   
+}
+
+.destacado{
+    color: brown;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3{
+    color: rgb(86, 119, 150);
+}

@@ -64,13 +64,13 @@ a {
 		background: #F1F2C0;
 		margin-left: 0px;
 		float: left;		
-		width: 800px;
+		width: 100%;
 		
 	}
 	#aside {
 		background: #CCC59E;
 		float: left;
-		width: 800px;
+		width: 100%;
 	}
 
 }

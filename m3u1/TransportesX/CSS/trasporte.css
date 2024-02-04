@@ -1,0 +1,229 @@
+/*
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Preahvihear', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Doodle Shadow', system-ui;
+font-family: 'Silkscreen', sans-serif;
+*/
+
+/* BASE */
+
+body{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px; /* base */ 
+    line-height: 20px; /* separación de líneas de 20px */
+}
+
+header {
+    background-color: rgb(57, 147, 207);
+    padding: 16px 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 40px; /* tamaño */
+    font-weight: 100; /* peso se hace mas finita la letra */
+    font-style: italic; /* que este inclinada */
+    display: inline-block; /* acomoda un elemento al lado del otro */
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #6da9ed;
+    margin-bottom: 20px;
+}
+
+nav ul{
+    list-style: none; /* Saca el punto de la viñeta */
+    margin: 0; /* le saco el marge */
+    padding: 0; /* le saco el paddin */
+    display: flex; /* como necesito a empezar a ubicar estos botones uno al lado del otro usamos un display entonces el ul trabaja como un contenedor */
+}
+
+nav ul li{
+    flex-grow: 1;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+
+
+nav ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.3); /* cambia de color cuando pasa el mouse por arriba  */
+}
+
+
+footer {
+    background-color: #ccc;
+    clear: both;
+    color: #333;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;    
+}
+
+nav ul li a.activo{
+    background-color: #4c76a5;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+/* INICIO - home */
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;    
+}
+
+.testimonios{
+    width: 25%;
+    /* background-color: orange; */
+}
+
+.columnas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos p{
+    font-size: 20px;
+}
+
+.testimonio {
+    background-color: #ccc;
+    padding: 16px;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    background-color: yellow;
+    display: block;
+}
+
+.testimonio .autor{
+    font-size: 10px;
+    text-align: center;
+    background-color: lightcoral;
+    display: block;
+    margin: 12px 0;
+}
+/* FIN - home */
+
+/* INICIO - nosotros */
+
+.historia p {
+    font-size: 12px;
+}
+
+.persona {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+    /* background-color: orange; */
+}
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona img {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.persona h5,
+.persona h6 {
+    margin: 0;
+    font-weight: normal;
+    color: #2e64a1;
+}
+
+.persona p{
+    color: #666;
+    font-size: 10px;
+}
+
+/* FIN - nosotros */
+
+/* INICIO - servicios */
+.servicio {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px; /* separa  */
+    align-items: center;
+
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1; /* linea */
+    padding-bottom: 10px;
+
+}
+
+.servicio .info p{
+    font-size: 13px;
+
+}
+
+.servicio img{
+    border-radius: 13px;
+    display: block;
+    max-width: 225px;
+
+}
+
+
+/* seudo clase nth-child */
+.servicio:nth-child(even) {
+    flex-direction: row-reverse;   /* a algunos hijos cámbiame el orden de los elementos */
+}
+
+
+
+
+
+
+/* FIN - servicios */
+
+
+
+
+
+
+
+
+
+
+

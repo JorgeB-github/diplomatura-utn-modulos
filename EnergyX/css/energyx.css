@@ -1,26 +1,13 @@
-.inicio {
-    background-color: rgb(199, 197, 197);
-    margin: 0; /* le saco el marge */
-    padding: 0; /* le saco el paddin */
-    font-family: 'Finlandica', sans-serif;
-    margin-bottom: 20px;
-    display: flex; 
-    flex-grow: 1;
-    text-align: center;
-    bottom: 35px;
-}
+    header {
+        font-family: 'Finlandica', sans-serif;
+        background-color: red;
+        margin: 0;        
+    }
+    .inicio img {
+        width: 80px; /* ajusta el ancho*/
+        height: 80px;/* ajusta el alto*/
+        margin: 0;
+    }
 
-.inicio img{
-    width: 80px; /* ajusta el ancho según tus necesidades */
-    height: 80px; /* ajusta el alto según tus necesidades */
-}
-
-
-
-
-.menu {
-
-
-}
 
 

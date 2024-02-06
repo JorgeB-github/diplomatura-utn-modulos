@@ -35,15 +35,14 @@
     }
     
 
+
+
 /* FIN header y Barra de navegacion */         
 
 /* INICIO body */         
-.main img{    
-        height: 50%;
-        width: 100%;
-        position: absolute;
-        background-size: cover;
-        background-position: center;
+.main img{        
+        overflow-clip-margin: content-box;
+        
 }
 
 
@@ -54,9 +53,60 @@
 /* FIN body */         
 
 
+footer {
+    background-color: #ccc;
+    clear: both;
+    color: #333;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;    
+}
 
 
 
+/* ################################################################################################################################################# 
+######################                                CSS para pantalla de PRODUCTOS                                          ######################
+####################################################################################################################################################*/
 
+.productos{
+    position: relative;
+    display: inline-block;
+}
 
+.productos img{
+    width: 300px; /* Establece el ancho deseado */
+    height: 200px; /* Establece la altura deseada */
+    box-shadow: 10px 13px 15px 0px rgba(189,181,181,0.75);
+    -webkit-box-shadow: 10px 13px 15px 0px rgba(189,181,181,0.75);
+    -moz-box-shadow: 10px 13px 15px 0px rgba(189,181,181,0.75);
+}
 
+.productos h2 {
+    font-family: 'Finlandica', sans-serif;
+    color: #0068b5;  
+}
+
+.productos p{
+    font-family: 'Finlandica', sans-serif;
+    font-size: 16px;
+    
+}
+
+.productos .generacion{
+    background-color: #0068b5;
+    
+    
+
+    
+
+}
+
+.productos .transmision{
+    
+    
+}
+
+.productos .almacenamiento{
+    
+    
+}

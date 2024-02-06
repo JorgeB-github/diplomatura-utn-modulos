@@ -40,14 +40,62 @@
 /* FIN header y Barra de navegacion */         
 
 /* INICIO body */         
-.main img{        
-        overflow-clip-margin: content-box;
-        
+.main {
+   
+    
 }
 
 
+.main img{        
+        overflow-clip-margin: content-box;
+        width: 100%;
+        height: 550px; 
+        display: block;     
+        
+}
 
+.main .nosotros {
+    background-color: #658aac;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 16px;    
+    position: absolute;
+    top: 110px;
+    margin-left: 300px;
+    margin-right: 1200px;
+}
 
+.main .nosotros h2{
+    font-family: 'Finlandica', sans-serif;
+}
+
+.main .nosotros img{
+    width: 300px; 
+    height: 200px; 
+    border-radius: 65px 65px 65px 65px;
+    -webkit-border-radius: 65px 65px 65px 65px;
+    -moz-border-radius: 65px 65px 65px 65px;
+    border: 2px solid #ffffff;    
+}
+
+.main .mision {
+    font-family: 'Finlandica', sans-serif;
+    width: 900px; 
+    height: 200px; 
+    background-color: #293744;
+    color: white;      
+    padding: 16px;    
+    position: absolute;
+    top: 130px;
+    margin-left: 620px;
+    
+    border-radius: 65px 65px 65px 65px;
+    -webkit-border-radius: 65px 65px 65px 65px;
+    -moz-border-radius: 65px 65px 65px 65px;
+    
+    
+}
 
 
 /* FIN body */         

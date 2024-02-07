@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const distancia = prompt('Por favor ingrese la distancia a recorrer')
+
+        if (0 < distancia && distancia <= 1000) {
+			document.write(`Para recorre ${distancia} metro es aconsejable hacerlo a pie`);
+		} else if (1000 < distancia && distancia <= 10000) {
+			document.write(`Para recorre ${distancia} metro es aconsejable hacerlo en bicicleta`);
+		} else if (10000 < distancia && distancia <= 30000) {
+			document.write(`Para recorre ${distancia} metro es aconsejable hacerlo en colectivo`);
+		} else if (30000 < distancia && distancia <= 100000) {
+			document.write(`Para recorre ${distancia} metro es aconsejable hacerlo en auto`);
+		} else{
+            document.write(`Para recorre ${distancia} metro es aconsejable hacerlo en avión`);
+        }
+    </script>
+</body>
+</html>

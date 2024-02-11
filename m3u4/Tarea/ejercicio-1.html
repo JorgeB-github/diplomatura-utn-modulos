@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio-1.css">
+    <link rel="stylesheet" href="ejercicio-1.js">
+    <title>Document</title>
+</head>
+<body class="general">
+
+    <div class="grande" id="cgrande">
+        <div class="mediano" id="cmedicano">
+            <div class="chico" id="cchico">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const general = document.getElementsByClassName('general');
+        const cgrande = documentElementById('grande');
+        const cmedicano = documentElementById('mediano');
+        const cchico = documentElementById('chico');
+
+        cgrande.addEventListener('click', function() {
+            cuadrado.classList.add('grande');
+        });
+
+        cmedicano.addEventListener('click', function () {
+            cuadrado.classList.add('borde');
+        });
+
+        rescchico.addEventListener('click', function () {
+            cuadrado.classList.remove('rojo', 'borde');
+        });
+
+    </script>
+
+
+
+    
+</body>
+</html>

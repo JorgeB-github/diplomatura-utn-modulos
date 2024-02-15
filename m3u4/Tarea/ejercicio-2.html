@@ -9,33 +9,30 @@
 <body>
     <h2>Ingrese un texto:</h2>
     <textarea id="texto"></textarea>
+    <button onclick="contarlet()">Extraer Contenido</button>
+    
+    
 
-    text.length
 
+    <script>       
 
+        function contarlet(){
+            const tag = document.getElementById("texto");
+            const contenido = tag.value;
+            
+            for(i=0;i<=contenido.length;i++) {
+                let cantletras = i;                
+                i++;
+            }
+            return cantletras;
+        }
 
-    <script>
+        console.log(cantletras);     
         
-        let ingreso = document.getElementById("nombreInput").value
-
-        console.log(ingreso);
-
-
-
-
-
-
-
-
-
-
 
     </script>
 
-
-
-
-
+     <!-- no puedo retornar la variable -->
 
 </body>
 </html>

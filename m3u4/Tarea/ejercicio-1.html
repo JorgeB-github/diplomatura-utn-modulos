@@ -8,38 +8,31 @@
     <link rel="stylesheet" href="ejercicio-1.js">
     <title>Document</title>
 </head>
-<body class="general">
+<body>
 
-    <div class="grande" id="cgrande">
-        <div class="mediano" id="cmedicano">
-            <div class="chico" id="cchico">
-            </div>
-        </div>
+    <div class="uno" id="cgrande">        
+    </div>
+    
+    <div class="dos" id="cmedicano">            
+    </div>
+
+    <div class="tres" id="cchico">
     </div>
 
 
     <script>
-        const general = document.getElementsByClassName('general');
-        const cgrande = documentElementById('grande');
-        const cmedicano = documentElementById('mediano');
-        const cchico = documentElementById('chico');
+        const uno = document.querySelector(".uno");
+        console.log(uno);
 
-        cgrande.addEventListener('click', function() {
-            cuadrado.classList.add('grande');
+        const dos = document.querySelector(".dos");
+        console.log(dos);
+
+        const tres = document.querySelector(".tres");
+        console.log(tres);
+
+        document.getElementById('uno').addEventListener('click', function () {
+            document.body.style.backgroundColor = "blue";
         });
-
-        cmedicano.addEventListener('click', function () {
-            cuadrado.classList.add('borde');
-        });
-
-        rescchico.addEventListener('click', function () {
-            cuadrado.classList.remove('rojo', 'borde');
-        });
-
-    </script>
-
-
-
-    
+    </script>    
 </body>
 </html>

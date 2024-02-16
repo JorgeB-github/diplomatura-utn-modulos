@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <style>
+        textarea{
+            resize: none;
+        }
+    </style>
 <body>
     <h2>Ingrese un texto:</h2>
-    <textarea id="texto"></textarea>
-    <button onclick="contarlet()">Extraer Contenido</button>
+    <textarea id="texto" rows="4"></textarea>
+    
     
     
 
@@ -27,7 +32,7 @@
             return cantletras;
         }
 
-        console.log(cantletras);     
+        console.log(contarlet.cantletras);     
         
 
     </script>

@@ -10,29 +10,22 @@
 </head>
 <body>
 
-    <div class="uno" id="cgrande">        
+    <div class="uno" id="cgrande" onclick="cambiarFondo('blue')">        
     </div>
     
-    <div class="dos" id="cmedicano">            
+    <div class="dos" id="cmedicano" onclick="cambiarFondo('yellow')">            
     </div>
 
-    <div class="tres" id="cchico">
+    <div class="tres" id="cchico" onclick="cambiarFondo('red')">
     </div>
 
 
     <script>
-        const uno = document.querySelector(".uno");
-        console.log(uno);
 
-        const dos = document.querySelector(".dos");
-        console.log(dos);
+        function cambiarFondo(color){
+            document.querySelector('body').style.background = color;
+        }
 
-        const tres = document.querySelector(".tres");
-        console.log(tres);
-
-        document.getElementById('uno').addEventListener('click', function () {
-            document.body.style.backgroundColor = "blue";
-        });
     </script>    
 </body>
 </html>

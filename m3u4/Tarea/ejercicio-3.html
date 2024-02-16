@@ -9,7 +9,6 @@
 </head>
 <body>
     <script>
-
        var alumnos = [
                         {
                           nombre: 'Juan Gomez',
@@ -39,25 +38,35 @@
                     ];                         
     
 
-
-        function getqualification (alumnos){
+        function getqualification (valor1){
             var aprobados = [];
             var desaprobados = [];
 
-            for (i = 0; i < alumnos.length; i++){
-                if (alumnos[i].nota >= 7){
-                    aprobados.push(alumnos[i]);                    
+            for (i = 0; i < valor1.length; i++){
+                if (valor1[i].nota >= 7){
+                    aprobados.push(valor1[i]);                    
                 } else {
-                    desaprobados.push(alumnos[i]);
+                    desaprobados.push(valor1[i]);
                 }
             }          
+            
             return {
               aprobados: aprobados,
-              desaprobados: desaprobados    
-            };          
+              desaprobados: desaprobados
+            }
         }             
 
+        console.log(getqualification(alumnos));
+        
+        let resultado = getqualification(alumnos);
 
+        document.write(resultado.aprobados[0].nombre + " La nota: " + resultado.aprobados[0].nota + "<br>"); 
+        document.write(resultado.aprobados[1].nombre + " La nota: " + resultado.aprobados[1].nota + "<br>");
+        document.write(resultado.desaprobados[0].nombre + " La nota: " + resultado.desaprobados[0].nota + "<br>"); 
+
+        
+        
+        
         </script>
 
 

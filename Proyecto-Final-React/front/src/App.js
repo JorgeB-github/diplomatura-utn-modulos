@@ -10,6 +10,7 @@ import AsistenciaPage from './pages/AsistenciaPage';
 import NosotrosPage from './pages/NosotrosPage';
 import ProductosPage from './pages/ProductosPage';
 import SolucionesPage from './pages/SolucionesPage';
+import FormPage from './pages/FormPage';
 
 import './styles/components/layout/Nav.css'
 import './styles/components/layout/Header.css'
@@ -30,6 +31,7 @@ function App() {
           <Route path='productos' element ={<ProductosPage />} />
           <Route path='asistencia' element ={<AsistenciaPage />} />
           <Route path='soluciones' element ={<SolucionesPage />} />
+          <Route path='form' element ={<FormPage />} />          
         </Routes>
       </BrowserRouter>
 

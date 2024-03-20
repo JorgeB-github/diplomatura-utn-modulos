@@ -7,7 +7,8 @@ const Nav = (props) => {
                     <Link to="/">Nosotros</Link>
                     <Link to="/productos">PRODUCTOS</Link>
                     <Link to="/asistencia">ASISTENCIA</Link>
-                    <Link to="/soluciones">SOLUCIONES</Link>              
+                    <Link to="/soluciones">SOLUCIONES</Link>
+                    <Link to="/form"><i class="fas fa-user"></i></Link>                   
         </nav>
     );
 }

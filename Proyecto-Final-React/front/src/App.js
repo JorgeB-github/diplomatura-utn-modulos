@@ -17,6 +17,8 @@ import './styles/components/layout/Header.css'
 import './styles/components/layout/Footer.css'
 
 import './styles/components/pages/NosotrosPage.css'
+import './styles/components/pages/ProductosPage.css'
+import './styles/components/pages/FormPage.css'
 
 
 function App() {

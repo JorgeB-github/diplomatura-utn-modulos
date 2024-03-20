@@ -1,0 +1,116 @@
+
+.productos{
+    position: relative;
+    display: flex;
+    
+}
+
+.productos img{
+    width: 300px; /* Establece el ancho deseado */
+    height: 200px; /* Establece la altura deseada */
+}
+
+.productos h2 {
+    font-family: 'Finlandica', sans-serif;
+    font-size: 26px;
+    color: #0068b5;      
+}
+
+.productos p{
+    font-family: 'Finlandica', sans-serif;
+    font-size: 16px;
+    font-style: unset; 
+    
+}
+
+.productos .generacion {    
+    margin-left: 25px;
+    margin-right: 60px;
+    border-radius: 50%; 
+
+}
+
+.productos .generacion img{      
+    border-radius: 66px 25px 25px 65px;
+    -webkit-border-radius: 66px 25px 25px 65px;
+    -moz-border-radius: 66px 25px 25px 65px;
+}
+
+.productos .transmision img{
+    border-radius: 65px 65px 63px 62px;
+    -webkit-border-radius: 65px 65px 63px 62px;
+    -moz-border-radius: 65px 65px 63px 62px;   
+}
+
+.productos .almacenamiento img{
+    border-radius: 24px 68px 68px 24px;
+    -webkit-border-radius: 24px 68px 68px 24px;
+    -moz-border-radius: 24px 68px 68px 24px;   
+}
+
+.innovacion{
+    position: relative;
+    display: flex; 
+} 
+
+
+.innovacion p{
+    font-family: 'Finlandica', sans-serif;
+    font-size: 16px;
+    font-style: unset; 
+    
+}
+
+.innovacion img{
+    width: 300px; /* Establece el ancho deseado */
+    height: 200px; /* Establece la altura deseada */
+}
+
+.innovacion .smartgrid{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+.innovacion .invydesa{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.innovacion .smartgrid h2{
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: 'Finlandica', sans-serif;
+    font-size: 26px;
+    color: #0068b5; 
+}
+
+.innovacion .invydesa h2{
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: 'Finlandica', sans-serif;
+    font-size: 26px;
+    color: #0068b5; 
+}
+
+.innovacion .smartgrid img{
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: 'Finlandica', sans-serif;
+    font-size: 26px;
+    color: #0068b5; 
+    border-radius: 65px 0px 0px 65px;
+    -webkit-border-radius: 65px 0px 0px 65px;
+    -moz-border-radius: 65px 0px 0px 65px;
+}
+
+.innovacion .invydesa img{
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: 'Finlandica', sans-serif;
+    font-size: 26px;
+    color: #0068b5; 
+    border-radius: 0px 65px 63px 0px;
+    -webkit-border-radius: 0px 65px 63px 0px;
+    -moz-border-radius: 0px 65px 63px 0px;
+}

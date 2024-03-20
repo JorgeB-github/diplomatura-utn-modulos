@@ -1,0 +1,10 @@
+.barra-superior {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.barra-superior img {
+    max-width: 100%;
+    height: auto;
+}

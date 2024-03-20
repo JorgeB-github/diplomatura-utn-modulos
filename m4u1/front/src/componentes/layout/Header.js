@@ -1,12 +1,14 @@
-import Nav from "./Nav";
+import React from 'react';
 
-
-const Heder = (props) => {
+const Header = (props) => {
     return(
-        <div>Heder</div>
+        <header>
+            <div className="holder">
+                <img src="img/logo.png" width="100"></img>
+                <h1>Trasporte</h1>
+            </div>
+        </header>        
 
     );
 }
-
-
-export default Heder;
+export default Header;

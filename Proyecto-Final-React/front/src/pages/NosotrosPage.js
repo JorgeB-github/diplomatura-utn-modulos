@@ -15,8 +15,14 @@ const NosotrosPage = (props) => {
                 <div className="testimonios">
                     <h2>Testimonios</h2>
                     <div className="testimonio">
-                        <span className="cita">Simplemente Excelente</span>
-                        <span className="autor">Juan Gomez - zapatos.com</span>
+                        <span className="cita">Buen Servicio</span>
+                        <br />
+                        <span className="autor">Juan Gomez</span>
+                        <br />                        
+                        <br />
+                        <span className="cita">Servicio Estable</span>
+                        <br />
+                        <span className="autor">Jose Garcia</span>
                     </div>
                 </div>
             </div>

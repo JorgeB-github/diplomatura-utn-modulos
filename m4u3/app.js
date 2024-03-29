@@ -17,12 +17,12 @@ var precioRouter = require('./routes/precio');
 
 // ########################################################################################################################################################################
 // CLASE 26-02 -- TAREA //
-var nosotrosRouter = require('.routes/nosotros');
-var asistenciaRouter = require('.routes/asistencia');
-var productosRouter = require('.routes/productos');
+var nosotrosRouter = require('./routes/nosotros');
+var asistenciaRouter = require('./routes/asistencia');
+var productosRouter = require('./routes/productos');
 // ########################################################################################################################################################################
-
-
+ 
+ 
 var app = express();
 
 // view engine setup

@@ -2,19 +2,14 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    
 }
 
 .columna {
     flex: 1;
     margin: 0 10px;
+    
 }
-
-nav {
-    background-color: #e0e0e0;
-    padding: 10px;
-    text-align: center;
-}
-
 .holder {         
     max-width: 960px;
     margin: 0 auto;
@@ -26,10 +21,3 @@ nav {
     
 }
 
-footer {
-    background-color: #ccc;    
-    color: #333;
-    text-align: center;
-    padding: 5px 10;
-    margin-top: 30px;    
-}

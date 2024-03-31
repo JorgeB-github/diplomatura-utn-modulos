@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+{{#if nota}}
+<p>Hola {{nombre}} tu nota es {{nronota}} equivale a un {{calificacion}} <a href="/salir">Salir</a></p>
+{{/if}}
+{{#unless nota}}
+<form action="/calculo" method="post">
+    <p>Nombre</p><input type="text" name="nombre">
+    <p>Nota</p><input type="text" name="nronota">
+    
+    <button>ingresar</button>
+</form>
+{{/unless}}
+
+
+

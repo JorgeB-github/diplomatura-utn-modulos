@@ -11,6 +11,7 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { serialize } = require('v8');
 
 var app = express();
 
@@ -36,7 +37,7 @@ app.use(session({
 app.get('/', function(req,res){
   var conocido = Boolean(req.session.nombre);
 
-  res. render ('index', {
+  res.render ('index', {
     title: 'Sessions en Express.js',
     conocido: conocido,
     nombre: req.session.nombre
@@ -44,14 +45,21 @@ app.get('/', function(req,res){
 });
 
 
-//Para campturar los datos metodo post
-app.post('/ingresar', function(req, res)
+//uso método post porque son datos que viajan a través de un formulario
+app.post('/ingresar', function (req, res)
 //var datos = req.body.nombre //capturando
 {
   if (req.body.nombre){
     req.session.nombre = req.body.nombre // guardo lo que viene en una variable de session
   }
   res.redirect('/');
+});
+
+
+app.get('/salir', function (req, res)
+{
+  req.session.destroy();
+res.redirect('/');
 });
 
 

@@ -28,14 +28,14 @@ app.use(session({
   saveUninitialized: true
 }));
 
-
+// #########################      TAREA    ####################################################################### 
 
 app.get('/', function(req,res){
   var nota = Boolean(req.session.nronota);  
   
   
   res.render ('index', {
-    title: 'Resultado de la Evaluacion',
+    title: 'Resultado de la evaluación',
     nota: nota,
     nronota: req.session.nronota,
     nombre: req.session.nombre,   
@@ -71,9 +71,6 @@ app.get('/salir', function (req, res)
   req.session.destroy();
 res.redirect('/');
 });
-
-
-
 
 // ################################################################################################
 

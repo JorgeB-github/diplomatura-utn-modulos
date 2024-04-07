@@ -1,0 +1,32 @@
+<div style="margin-top: 50px; margin-bottom: 50px; display: flex; justify-content: center;">
+  <form action="./admin/login" method="post">
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-3 col-form-label">Usuario</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control custom-input" id="inputname" name="usuario">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+      <div class="col-sm-9">
+        <input type="password" class="form-control custom-input" id="inputPassword3" name="password">
+      </div>
+    </div>
+  
+    <div class="row mb-3">
+      <div class="col-sm-12 text-center">
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </div>
+    </div>
+  </form>
+  {{#if error}}
+        <p>Usuario y/o contraseña incoerrecta</p>
+    {{/if}}
+</div>
+
+<style>
+  .custom-input {
+    max-width: 300px;
+  }
+</style>
+

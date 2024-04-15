@@ -43,7 +43,7 @@ secured = async (req, res, next) => {
   try{
     console.log(req.session.id_usuario);
     if (req.session.id_usuario) {
-      nesx();      
+      next();      
     } else {
       res.redirect('/admin/login');
     }
@@ -62,7 +62,7 @@ app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 
 
-app.use('admin/novedades', secured, addmintRouter);
+app.use('/admin/novedades', secured, addmintRouter);
 
 
 

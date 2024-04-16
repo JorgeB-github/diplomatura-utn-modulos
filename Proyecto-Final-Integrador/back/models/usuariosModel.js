@@ -13,4 +13,4 @@ async function getUserByUsernameAndPassword(user,password){
     }
 }
 
-module.exports = {getUserByUsernameAndPassword}
+module.exports = { getUserByUsernameAndPassword }

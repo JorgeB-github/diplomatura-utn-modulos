@@ -17,7 +17,7 @@ var usersRouter = require('./routes/users');
 
 // Visto en clase 4/3
 var loginRouter = require('./routes/admin/login');
-var addmintRouter = require('./routes/admin/novedades');
+var addmintRouter = require('./routes/admin/inicio');
 
 
 
@@ -62,7 +62,7 @@ app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 
 
-app.use('/admin/novedades', secured, addmintRouter);
+app.use('/admin/inicio', secured, addmintRouter);
 
 
 
@@ -83,5 +83,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

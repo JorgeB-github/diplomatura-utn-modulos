@@ -9,19 +9,27 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.post('/', async (req,res,next) => {
+router.get( '/logout', function (req, res, next) {
+  req.session.destroy(); //destruitr las variables de sesion 
+  res.render('admin/login', { //una vez destruidas enviame al login
+    layout: 'admin/layout'
+  });
+});
+
+
+router.post('/', async (req, res, next) => {
   try{
-    var usuarios = req.body.usuarios; // captura la info
+    var usuario = req.body.usuario; // captura la info
     var password = req.body.password; // captura la password
 
-    var data = await usuariosModels.getUserByUsernameAndPassword(usuarios, password); // capturo los datos
+    var data = await usuariosModels.getUserByUsernameAndPassword(usuario, password); // capturo los datos
 
     if (data != undefined) {
       
       req.session.id_usuario = data.id;
       req.session.nombre = data.usuario;
       
-      res.redirect('/admin/novedades');      
+      res.redirect('/admin/inicio');      
     } else {
       res.render('admin/login', {
         layout: 'admin/layout',

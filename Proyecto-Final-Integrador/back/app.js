@@ -17,7 +17,7 @@ var usersRouter = require('./routes/users');
 
 // Visto en clase 4/3
 var loginRouter = require('./routes/admin/login');
-var addmintRouter = require('./routes/admin/inicio');
+var addmintRouter = require('./routes/admin/novedades');
 
 
 
@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //me traigo el codigo de la unidad 4 para que al no 
 app.use(session({
   secret:'QazWSXedcplmokj10987',
+  cookie: {maxAge: null},
   resave: false,
   saveUninitialized: true
 }));
@@ -62,7 +63,7 @@ app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 
 
-app.use('/admin/inicio', secured, addmintRouter);
+app.use('/admin/novedades', secured, addmintRouter);
 
 
 

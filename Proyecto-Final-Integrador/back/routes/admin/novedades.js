@@ -18,10 +18,10 @@ router.get("/agregar", (req, res, next) => {
   });
 });
 
-router.post ('/agregar', async (req, res, next) =>{
+router.post ('/agregar', async (req, res, next) => {
   try {
-    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuepo != ""){
-      await novedadesModel.insertNovedades(res.body);
+    if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
+      await novedadesModel.insertNovedades(req.body);
       res.redirect('/admin/novedades')
     } else {
       res.render('admin/agregar', {

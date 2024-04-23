@@ -1,0 +1,4 @@
+La sección dinámica se mi proyecto, se estableció en el tipo de generación que se va a tener disponible para ofrecer a un cliente.
+Actualmente la table se estructura en el archivo 
+Proyecto-Final-Integrador/back/views/admin/novedades.hbs el cual muestra un listado que extrae desde la BD con los tipos de metodologías disponibles para la generación de electricidad.
+

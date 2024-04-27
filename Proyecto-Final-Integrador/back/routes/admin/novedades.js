@@ -40,6 +40,15 @@ router.post ('/agregar', async (req, res, next) => {
   }
 })
 
+/* PARA ELIMINAR NOVEDADES*/
+router.get('/eliminar/:id', async (req, res, next) => {
+  const id = req.params.id;
+  await novedadesModel.deleteNovedades(id);
+  res.redirect('/admin/novedades');
+});
+
+
+
 
 
 

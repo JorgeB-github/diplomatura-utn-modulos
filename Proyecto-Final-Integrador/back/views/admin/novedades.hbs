@@ -4,7 +4,7 @@
   <div class="row">
     <p class="text-center">Hola
       {{persona}}
-      <a class="btn btn-danger" href="/admin/login/logout">Cerra sesion<i class="fas fa-sing-out-alt"></i></a></p>
+      <a class="btn btn-danger" href="/admin/login/logout">Cerra sesión <i class="fas fa-sign-out-alt"></i></a></p>
   </div>
 
 <!--COLUMNA 2-->
@@ -13,7 +13,7 @@
       <h3>Listado de tipos de Generación</h3>
     </div>
     <div class="col-5 text-end">
-      <a class="btn btn-success" href="/admin/novedades/agregar"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo</a>
+      <a class="btn btn-success" href="/admin/novedades/agregar"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo</a>
     </div>
   </div>
   
@@ -38,10 +38,8 @@
       <td>{{subtitulo}}</td>
       <td>{{cuerpo}}</td>
       <td class="text-end">
-          <a class="btn btn-secondary" href=""><i class="fa 
-          fa-pencil" aria-hidden="true"></i></a>
-          <a class="btn btn-secondary" href=""><i class="fa fa-trash" 
-          aria-hidden="true"></i></a>
+          <a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"> MODIFICAR</i></a>
+          <a class="btn btn-secondary" href="/admin/novedades/eliminar/{{id}}"><i class="fa fa-trash" aria-hidden="true"> ELIMINAR</i></a>
       </td>      
     </tr>    
     {{/each}}

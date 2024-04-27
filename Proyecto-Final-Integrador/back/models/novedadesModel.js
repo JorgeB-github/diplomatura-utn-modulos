@@ -20,7 +20,16 @@ async function insertNovedades(obj) {
         console.error("Error al insertar registro:", error);
         throw error; 
     }
+} // insert
+
+
+// Delete novedad
+async function deleteNovedades(id){
+    var query =  "delete from novedades where id = ?";
+    var rows = await pool.query(query, [id]);
+    return rows;
 }
 
 
-module.exports = { getNovedades, insertNovedades };
+
+module.exports = { getNovedades, insertNovedades, deleteNovedades };

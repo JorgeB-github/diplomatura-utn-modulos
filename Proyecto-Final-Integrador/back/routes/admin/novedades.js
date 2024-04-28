@@ -2,6 +2,8 @@ var express = require("express");
 var router = express.Router();
 var novedadesModel = require("./../../models/novedadesModel");
 
+//Trae los registros de la BD y los muestra en Proyecto-Final-Integrador/back/views/admin/novedades.hbs
+
 router.get("/", async function (req, res, next) {
   var novedades = await novedadesModel.getNovedades();
 
@@ -11,6 +13,8 @@ router.get("/", async function (req, res, next) {
     novedades,
   });
 });
+
+//Agregar Obj a la BD
 
 router.get("/agregar", (req, res, next) => {
   res.render("admin/agregar", {

@@ -31,5 +31,23 @@ async function deleteNovedades(id){
 }
 
 
+//Modificar 
+//(traer una sola novedad por el id)
 
-module.exports = { getNovedades, insertNovedades, deleteNovedades };
+async function getNovedadesById(id) {
+    var query = 'select * from novedades where id = ?';    
+    var rows = await pool.query(query,[id]);
+    return rows[0];
+}
+ // para modificar UPDATE del dato PREVIAMENTE SELECCIONADO
+async function modificarNovedadesById (obj, id){  // es un obj porque tengo titulo subtitulo es un conjunto de datos que paso
+    try{
+        var query = 'update novedades set ? where id = ?';
+        var rows = await pool.query(query, [obj, id]);
+        return rows;
+    } catch (error) {
+        throw error;
+    }
+}
+
+module.exports = { getNovedades, insertNovedades, deleteNovedades, getNovedadesById, modificarNovedadesById };

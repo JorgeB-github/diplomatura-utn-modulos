@@ -49,6 +49,51 @@ router.get('/eliminar/:id', async (req, res, next) => {
 
 
 
+/* MODIFICAR 
+/*1 traer el diseño mas los datos de la novedad*/
+router.get('/modificar/:id', async (req, res, next) => {
+  var id = req.params.id;
+  console.log(req.params.id);
+
+  var novedad = await novedadesModel.getNovedadesById(id); /* traigo el registro */
+
+  res.render('admin/modificar', {  /* me trae el render del modificar nuevo layout > donde me trae la info a través de novedad */
+      layout: 'admin/layout',
+      novedad 
+  });
+});
+
+
+// Para modificar SOLO registro del objetos seleccionado
+router.post('/modificar', async (req,res, next) => {
+  try{
+
+    var obj = {                       // genero el objeto para ver que pasa en el Titulo, SUbTitulo y Cuerpo
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo
+    }
+    console.log(obj)
+
+    await novedadesModel.modificarNovedadesById(obj, req.body.id);   // Tengo el objeto y el ID
+    res.redirect('/admin/novedades');    // una vez que modifique redirijo a novedades
+
+    }catch (error) {
+      console.log(error)  
+      res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'no se modifico la novedad'
+      })
+    }
+})
+
+
+
+
+
+
+
 
 
 

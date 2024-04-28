@@ -1,11 +1,40 @@
 var express = require("express");
 var router = express.Router();
 var novedadesModel = require("./../../models/novedadesModel");
+var util = require('util');
+var cloudinary = require('cloudinary').v2;
+const uploader = util.promisify(cloudinary.uploader.upload);
+
+
 
 //Trae los registros de la BD y los muestra en Proyecto-Final-Integrador/back/views/admin/novedades.hbs
 
 router.get("/", async function (req, res, next) {
   var novedades = await novedadesModel.getNovedades();
+
+  //con map creo un nuevo array de elemento
+
+  novedades = novedades.map(novedad => {
+    if (novedad.img_id) {
+      const imagen = cloudinary.image(novedad.img_id, {
+        width: 100,
+        height: 100,
+        crop: 'fill' //pad son propiedades de cloudinari
+      });
+      return {
+        ...novedad,
+        imagen
+      }
+    }else {
+      return {
+        ...novedad,
+        imagen: ''
+      }
+    }
+  });
+
+
+
 
   res.render("admin/novedades", {
     layout: "admin/layout",
@@ -14,18 +43,31 @@ router.get("/", async function (req, res, next) {
   });
 });
 
-//Agregar Obj a la BD
+//Agregar Obj a la BD + vista
 
 router.get("/agregar", (req, res, next) => {
   res.render("admin/agregar", {
     layout: "admin/layout",
   });
 });
-
+// Agregar Obj a la BD 
 router.post ('/agregar', async (req, res, next) => {
   try {
+    
+    var img_id = '';
+    console.log(req.files.imagen);
+
+    if(req.files && Object.keys(req.files).length > 0){
+      imagen= req.files.imagen;
+      img_id = (await uploader(imagen.tempFilePath)).public_id;
+    }
+
     if (req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
-      await novedadesModel.insertNovedades(req.body);
+      //await novedadesModel.insertNovedades(req.body); linea sin la IMG
+      await novedadesModel.insertNovedades({
+        ...req.body, //me traigo titulo sub y lo que pasa en cuerpo y le sumo
+        img_id      // no tengo img o si
+      });
       res.redirect('/admin/novedades')
     } else {
       res.render('admin/agregar', {

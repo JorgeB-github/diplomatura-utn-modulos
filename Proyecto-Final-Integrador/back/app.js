@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var fileUpload = require('express-fileupload'); // indico a travez de una variable que voy a atrabajar con subidas de archivos
 
 require('dotenv').config();
 //Se vio en la unidad 4
@@ -53,6 +54,12 @@ secured = async (req, res, next) => {
   }
 }
 
+//coloco como se crea el archivo temp dela subida
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
+
 
 
 
@@ -62,12 +69,7 @@ app.use('/users', usersRouter);
 // Visto en clase 4/3
 app.use('/admin/login', loginRouter);
 
-
 app.use('/admin/novedades', secured, addmintRouter);
-
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

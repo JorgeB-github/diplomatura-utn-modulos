@@ -1,5 +1,7 @@
 var pool = require('./bd');
 
+//Traer los datos de la tabla
+
 async function getNovedades() {
     try {
         var query = 'select * from novedades';
@@ -10,6 +12,8 @@ async function getNovedades() {
         throw error; 
     }
 }
+
+//Insertar un registro a la tabla
 
 async function insertNovedades(obj) {
     try {

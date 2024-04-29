@@ -4,7 +4,7 @@ var novedadesModel = require("./../../models/novedadesModel");
 var util = require('util');
 var cloudinary = require('cloudinary').v2;
 const uploader = util.promisify(cloudinary.uploader.upload);
-
+const destroy = util.promisify(cloudinary.uploader.destroy);
 
 
 //Trae los registros de la BD y los muestra en Proyecto-Final-Integrador/back/views/admin/novedades.hbs
@@ -113,11 +113,33 @@ router.get('/modificar/:id', async (req, res, next) => {
 // Para modificar SOLO registro del objetos seleccionado
 router.post('/modificar', async (req,res, next) => {
   try{
+      //Se agrega bloque de codigo para la modificacion con la IMG
+      let img_id = req.body.img_original;   // me trae IMG original
+      let borrar_img_vieja = false;    // genero una bariable en falso 
+
+      if (req.body.img_delete === "1") {
+        img_id = null;
+        borrar_img_vieja = true;
+      }else {
+        if(req.files && Object.keys(req.files).length > 0) {
+          imagen = req.files.imagen;
+          img_id = (await uploader (imagen.tempFilePath)).public_id;
+          borrar_img_vieja = true;
+        }
+      }
+
+      if (borrar_img_vieja && req.body.img_original) {
+        await (destroy(req.body.img_original));
+      }
+      
+      //Fin del bloque
+
 
     var obj = {                       // genero el objeto para ver que pasa en el Titulo, SUbTitulo y Cuerpo
       titulo: req.body.titulo,
       subtitulo: req.body.subtitulo,
-      cuerpo: req.body.cuerpo
+      cuerpo: req.body.cuerpo,
+      img_id   // agrego por IMG
     }
     console.log(obj)
 

@@ -89,6 +89,14 @@ router.post ('/agregar', async (req, res, next) => {
 /* PARA ELIMINAR NOVEDADES*/
 router.get('/eliminar/:id', async (req, res, next) => {
   const id = req.params.id;
+
+  // Eliminar con IMG 
+  let novedad = await novedadesModel.getNovedadesById(id);
+  if (novedad.img_id) {
+    await (destroy(novedad.img_id));
+  }
+  //FIN
+  
   await novedadesModel.deleteNovedades(id);
   res.redirect('/admin/novedades');
 });

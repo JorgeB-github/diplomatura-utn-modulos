@@ -24,7 +24,7 @@ router.get('/novedades', async function(req, res, next) {
             }
         }
     });    
-    res.render('index', { title: 'Express' });
+    res.json(novedades);
 });
 
 

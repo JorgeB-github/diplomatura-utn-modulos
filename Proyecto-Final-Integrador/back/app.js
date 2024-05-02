@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fileUpload = require('express-fileupload'); // indico a travez de una variable que voy a atrabajar con subidas de archivos
+var cors = require('cors'); // indico a mi app que se requiere esta dempendecia CORS
 
 require('dotenv').config();
 //Se vio en la unidad 4
@@ -19,6 +20,11 @@ var usersRouter = require('./routes/users');
 // Visto en clase 4/3
 var loginRouter = require('./routes/admin/login');
 var addmintRouter = require('./routes/admin/novedades');
+
+//generamos la API
+var apiRouter = require('./routes/api');
+
+
 
 
 
@@ -70,6 +76,9 @@ app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 
 app.use('/admin/novedades', secured, addmintRouter);
+
+//utilizo la API
+app.use('/api', cors(), apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
